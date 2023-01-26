@@ -1,16 +1,19 @@
 ---
+import '../styles/global.css';
+
 const titulo = "Blog";
 ---
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <title>{titulo}</title>
-</head>
-<body>
+  </head>
+  <body>
     <a href="/">Casa</a>
     <a href="/sobreMi">Sobre mi</a>
     <a href="/blog/">Blog</a>
@@ -18,11 +21,13 @@ const titulo = "Blog";
     <h1>Mi aprendizaje en astro</h1>
     <p>En este blog comentare mis progresos con astro</p>
     <ul>
-        <li>
-            <a href="/post/post-1">Primera publicacion</a>
-            <a href="/post/post-2">Segunda publicacion</a>
-            <a href="/post/post-3">Tercera publicacion</a>
-        </li>
+      <>
+        <a href="/post/post-1">Primera publicacion</a>
+        <br />
+        <a href="/post/post-2">Segunda publicacion</a>
+        <br />
+        <a href="/post/post-3">Tercera publicacion</a>
+      </>
     </ul>
-</body>
+  </body>
 </html>

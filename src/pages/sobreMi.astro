@@ -1,4 +1,5 @@
 ---
+import "../styles/global.css";
 const titulo = "Sobre mi";
 
 const identidad = {
@@ -23,6 +24,10 @@ const stack = [
 const feliz = true;
 const terminado = false;
 const goal = 7;
+
+const stackColor = "green";
+const fontWeight = "bold";
+const textCase = "uppercase";
 ---
 
 <html lang="en">
@@ -32,6 +37,17 @@ const goal = 7;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{titulo}</title>
+    <style define:vars={{ stackColor, fontWeight, textCase }}>
+      h1 {
+        color: rgba(245, 0, 241, 0.836);
+        font-size: 4rem;
+      }
+      .stack {
+        color: var(--stackColor);
+        font-weight: var(--fontWeight);
+        text-transform: var(--textCase);
+      }
+    </style>
   </head>
   <body>
     <a href="/">Casa</a>
@@ -44,10 +60,16 @@ const goal = 7;
       Quise aprender una nueva forma de desarrollar sitios web y descubri astro.
       Espero que esta pagina les guste, ya que pondre todo mi esfuezo en esto
     </p>
-	
-	{feliz && <p>Estoy feliz de aprender Astro</p>}
-	{terminado && <p>Terminando el tutorial</p>}
-	{goal === 7 ?<p>Mi meta es terminar en 7 dias</p> : <p>Si no lo termino en 7 dias sera en 10</p>}
+
+    {feliz && <p>Estoy feliz de aprender Astro</p>}
+    {terminado && <p>Terminando el tutorial</p>}
+    {
+      goal === 7 ? (
+        <p>Mi meta es terminar en 7 dias</p>
+      ) : (
+        <p>Si no lo termino en 7 dias sera en 10</p>
+      )
+    }
     <p>Dejare informacion sobre mi</p>
 
     <ul>
@@ -70,7 +92,7 @@ const goal = 7;
     </ul>
     <p>Mi stack de conocimiento:</p>
     <ul>
-      {stack.map((stack) => <li>{stack}</li>)}
+      {stack.map((stack) => <li class="stack">{stack}</li>)}
     </ul>
   </body>
 </html>
