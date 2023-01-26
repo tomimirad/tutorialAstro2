@@ -1,18 +1,76 @@
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-        <a href="/">Casa</a>
-        <a href="/sobreMi/">Sobre mi</a>
-        <a href="/blog/">Blog</a>
-        <h1>Sobre Mi</h1>
-        <h2>Esta es mi primer sitio web con astro</h2>
+---
+const titulo = "Sobre mi";
 
-        <p>Quise aprender una nueva forma de desarrollar sitios web y descubri astro. Espero que esta pagina les guste, ya que pondre todo mi esfuezo en esto</p>
-	</body>
+const identidad = {
+  nombre: "Tomas",
+  apellido: "Miranda",
+  pais: "Argentina",
+  ocupacion: "Licenciado en sistemas",
+  hobbies: ["Desarrollo web", "jugar videojuegos"],
+};
+
+const stack = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Node.js",
+  "Astro",
+  "Angular",
+  "Markdown",
+];
+
+const feliz = true;
+const terminado = false;
+const goal = 7;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{titulo}</title>
+  </head>
+  <body>
+    <a href="/">Casa</a>
+    <a href="/sobreMi/">Sobre mi</a>
+    <a href="/blog/">Blog</a>
+    <h1>{titulo}</h1>
+    <h2>Esta es mi primer sitio web con astro</h2>
+
+    <p>
+      Quise aprender una nueva forma de desarrollar sitios web y descubri astro.
+      Espero que esta pagina les guste, ya que pondre todo mi esfuezo en esto
+    </p>
+	
+	{feliz && <p>Estoy feliz de aprender Astro</p>}
+	{terminado && <p>Terminando el tutorial</p>}
+	{goal === 7 ?<p>Mi meta es terminar en 7 dias</p> : <p>Si no lo termino en 7 dias sera en 10</p>}
+    <p>Dejare informacion sobre mi</p>
+
+    <ul>
+      <li>
+        Mi nombre es {identidad.nombre}
+      </li>
+      <li>
+        Vivo en {identidad.pais} y estoy estudiando para ser {
+          identidad.ocupacion
+        }
+      </li>
+      {
+        identidad.hobbies.length >= 2 && (
+          <li>
+            Dos de mis hobbies son: {identidad.hobbies[0]} y{" "}
+            {identidad.hobbies[1]}
+          </li>
+        )
+      }
+    </ul>
+    <p>Mi stack de conocimiento:</p>
+    <ul>
+      {stack.map((stack) => <li>{stack}</li>)}
+    </ul>
+  </body>
 </html>
