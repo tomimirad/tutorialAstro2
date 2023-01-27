@@ -1,0 +1,16 @@
+---
+import { AstroComponentInstance } from "astro/dist/runtime/server";
+
+const {plataforma,usuario} = Astro.props;
+---
+
+<a href={`http://www.${plataforma}.com/${usuario}`}>{plataforma}</a>
+
+<style>
+    a{
+        padding: 0.5rem 1rem;
+        color: white;
+        background-color: #4c1d95;
+        text-decoration: none;
+    }
+</style>

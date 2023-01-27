@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import Navigation from "../component/navigation.astro";
+import Footer from "../component/footer.astro";
 const titulo = "Sobre mi";
 
 const identidad = {
@@ -50,9 +52,7 @@ const textCase = "uppercase";
     </style>
   </head>
   <body>
-    <a href="/">Casa</a>
-    <a href="/sobreMi/">Sobre mi</a>
-    <a href="/blog/">Blog</a>
+    <Navigation />
     <h1>{titulo}</h1>
     <h2>Esta es mi primer sitio web con astro</h2>
 
@@ -94,5 +94,6 @@ const textCase = "uppercase";
     <ul>
       {stack.map((stack) => <li class="stack">{stack}</li>)}
     </ul>
+    <Footer/>
   </body>
 </html>
