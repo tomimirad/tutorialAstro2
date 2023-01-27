@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Hamburger from "../component/hamburger.astro";
 import Navigation from "../component/navigation.astro";
 import Footer from "../component/footer.astro";
 const titulo = "Sobre mi";
@@ -52,6 +53,7 @@ const textCase = "uppercase";
     </style>
   </head>
   <body>
+    <Hamburger />
     <Navigation />
     <h1>{titulo}</h1>
     <h2>Esta es mi primer sitio web con astro</h2>
@@ -95,5 +97,8 @@ const textCase = "uppercase";
       {stack.map((stack) => <li class="stack">{stack}</li>)}
     </ul>
     <Footer/>
+    <script>
+      import '../scripts/menu'
+    </script>
   </body>
 </html>

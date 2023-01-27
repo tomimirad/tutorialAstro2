@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import Navigation from '../component/navigation.astro';
+import Header from '../component/header.astro';
 import Footer from '../component/footer.astro';
 const titulo = "Casa";
 ---
@@ -14,8 +14,11 @@ const titulo = "Casa";
     <title>{titulo}</title>
   </head>
   <body>
-    <Navigation/>
+    <Header/>
     <h1>Mi sitio en astro</h1>
     <Footer/>
+    <script>
+      import '../scripts/menu'
+    </script>
   </body>
 </html>

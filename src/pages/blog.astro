@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Navigation from "../component/navigation.astro";
+import Hamburger from "../component/hamburger.astro";
 import Footer from "../component/footer.astro";
 const titulo = "Blog";
 ---
@@ -15,6 +16,7 @@ const titulo = "Blog";
     <title>{titulo}</title>
   </head>
   <body>
+    <Hamburger />
     <Navigation />
 
     <h1>Mi aprendizaje en astro</h1>
@@ -29,5 +31,8 @@ const titulo = "Blog";
       </>
     </ul>
     <Footer />
+    <script>
+      import '../scripts/menu'
+    </script>
   </body>
 </html>
