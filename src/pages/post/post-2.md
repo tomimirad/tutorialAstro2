@@ -1,4 +1,5 @@
 ---
+layout: ../../layout/mdPostLayout.astro
 title: 'Mi segundo post en mi blog'
 pubDate: 2023-01-26
 description: 'Hora de retomar lo que empeze ayer'

@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Header from '../component/header.astro';
 import Footer from '../component/footer.astro';
+import BaseLayout from '../layout/baseLayout.astro';
 const titulo = "Casa";
 ---
 
@@ -14,9 +15,9 @@ const titulo = "Casa";
     <title>{titulo}</title>
   </head>
   <body>
-    <Header/>
-    <h1>Mi sitio en astro</h1>
-    <Footer/>
+    <BaseLayout titulo={titulo}>
+    <h2>Subtitulo de mi blog</h2>
+    </BaseLayout>
     <script>
       import '../scripts/menu'
     </script>

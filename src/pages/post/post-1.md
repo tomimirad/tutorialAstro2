@@ -1,4 +1,5 @@
 ---
+layout: ../../layout/mdPostLayout.astro
 title: 'mi primer post en mi blog'
 pubDate: 2023-01-25
 description: 'Este sera mi primera publicacion en my astro blog'
@@ -11,7 +12,6 @@ tags: ["astro","bloggin","aprendiendo"]
 ---
 # Mi primera publicacion
 
-Publicado el: 2023-01-25
 
 Bienvenidos a mi primer blog sobre mi aprendizaje en astro, les voy a compartir mi viaje de conocimiento de como voy construyendo mi primer sitio web con astro
 
