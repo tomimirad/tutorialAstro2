@@ -1,8 +1,8 @@
 ---
 import "../styles/global.css";
-import Navigation from "../component/navigation.astro";
-import Hamburger from "../component/hamburger.astro";
-import Footer from "../component/footer.astro";
+import BaseLayout from "../layout/baseLayout.astro";
+import BlogPost from "../component/blogPost.astro";
+const allPost = await Astro.glob('../pages/post/*.md')
 const titulo = "Blog";
 ---
 
@@ -16,21 +16,13 @@ const titulo = "Blog";
     <title>{titulo}</title>
   </head>
   <body>
-    <Hamburger />
-    <Navigation />
-
+    <BaseLayout titulo={titulo}>
     <h1>Mi aprendizaje en astro</h1>
     <p>En este blog comentare mis progresos con astro</p>
     <ul>
-      <>
-        <a href="/post/post-1">Primera publicacion</a>
-        <br />
-        <a href="/post/post-2">Segunda publicacion</a>
-        <br />
-        <a href="/post/post-3">Tercera publicacion</a>
-      </>
+      {allPost.map((post)=> <BlogPost url={post.url} title={post.frontmatter.title}/>)}
     </ul>
-    <Footer />
+    </BaseLayout>
     <script>
       import '../scripts/menu'
     </script>

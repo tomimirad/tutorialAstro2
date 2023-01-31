@@ -7,7 +7,7 @@ author: 'Tomas Miranda'
 image:
 url: 'https://astro.build/assets/blog/astro-1-release-update/cover.jpeg' 
 alt: 'imagen de prueba'
-tags: ["astro","bloggin","aprendiendo"]
+tags: ["astro","blogging","aprendiendo"]
 
 ---
 # Mi primera publicacion
